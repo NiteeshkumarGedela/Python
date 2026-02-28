@@ -29,24 +29,19 @@ Enter the sum from the actual data and your Python code below:
 
 
 
-
 import re
-
-handle = open('http://py4e-data.dr-chuck.net/regex_sum_2337645.txt')
-
-numlist = []
-
+handle = open('konkor.txt')
+total = 0
 for line in handle:
     line = line.rstrip()
-    y = re.findall('[0-9]+', line)
-    for num in y:
-        lik = int(num)
-        numlist.append(lik)
-
-print(sum(numlist))
-
-           
-
+    claude = re.findall('[0-9]+',line)
+    for num in claude :
+        num = int(num)
+        total= total + num
+print(total)
+      
+  
+451332
 
 
 
